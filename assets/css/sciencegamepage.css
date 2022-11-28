@@ -2,7 +2,7 @@ body {
     color: rgb(47, 198, 128);
 }
 
-.choice-container {
+.options-container {
     display: flex;
     margin-bottom: 0.8rem;
     width: 100%;
@@ -12,7 +12,7 @@ body {
     min-width: 80rem;
 }
 
-.choice-container:hover {
+.options-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
     transform: scale(1.02);
@@ -63,4 +63,10 @@ body {
     height: 100%;
     background: rgb(11,223,36);
     width: 0%;
+}
+
+@media screen and (max-width: 768px) {
+    .options-container {
+        min-width: 40rem;
+    }
 }
