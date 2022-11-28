@@ -35,3 +35,32 @@ body {
 .incorrect {
     background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
 }
+
+#display-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display-page-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.display-page-main-text {
+    text-align: center;
+}
+
+#gameBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11,223,36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#gameComplete {
+    height: 100%;
+    background: rgb(11,223,36);
+    width: 0%;
+}
