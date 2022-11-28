@@ -29,19 +29,54 @@ let questions = [
         answer: 1,
     },
     {
-        question: "What percent of American adults believe that chocolate milk comes from brown cows?",
-        choice1: "20%",
-        choice2: "18%",
-        choice3: "7%",
-        choice4: "33%",
-        answer: 3,
+        question: "Which organisms can photosynthesise?",
+        choice1: "Plants and algae",
+        choice2: "Plants and animals",
+        choice3: "Fungi and plants",
+        choice4: "All of the above",
+        answer: 1,
     },
     {
-        question: "Approximately what percent of U.S. power outages are caused by squirrels?",
-        choice1: "10-20%",
-        choice2: "5-10%",
-        choice3: "15-20%",
-        choice4: "30%-40%",
+        question: "Photosynthesis is what kind of reaction?",
+        choice1: "Exothermic",
+        choice2: "Endothermic",
+        choice3: "Phototropic",
+        choice4: "All of the above",
+        answer: 2,
+    },
+    {
+        question: "Which of these is a limiting factor of photosynthesis?",
+        choice1: "Oxygen",
+        choice2: "Carbon dioxide",
+        choice3: "Methane",
+        choice4: "All of the above",
+        answer: 2,
+    },
+    {
+        question: "Which of these will increase the rate of photosynthesis?",
+        choice1: "Light intensity increases",
+        choice2: "Light intensity decreases",
+        choice3: "Light intensity remains constant",
+        choice4: "All of the above",
         answer: 1,
     }
 ]
+
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 6
+
+startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+}
+
+getNewQuestion = () => {
+    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('/end.html')
+    }
+
+    
