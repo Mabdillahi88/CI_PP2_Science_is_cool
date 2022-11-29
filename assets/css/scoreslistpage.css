@@ -1,0 +1,13 @@
+body {
+    color: #fff;
+}
+
+#topScoresList {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.scoresList {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
